@@ -1,0 +1,44 @@
+.cover {
+    
+}
+
+.cover-front {
+    inline-size: inherit;
+    block-size: inherit;
+    background-color: var(--primary);
+    /* background-color: green; */
+    border-inline-end: .25rem solid #ba111f;
+    /* border-radius: 0 0 0 .5rem; */
+    border-end-start-radius: .5rem;
+    box-sizing: border-box;
+    clip-path: polygon(0 4.95rem, 70% 3.45rem, 100% 3.45rem, 100% 100%, 0 100%);
+
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    transition: 1s transform;
+    transform-origin: right center;
+    backface-visibility: hidden;
+}
+
+.cover-back {
+    inline-size: inherit;
+    block-size: inherit;
+    background-color: var(--primary);
+    
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    inset-inline-start: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    transition: 1s transform;
+    transform-origin: left center;
+    padding: 1.5rem;
+    padding-block-start: 6.25rem;
+    clip-path: polygon(0 3.35rem, 30% 3.35rem, 100% 4.65rem, 100% 100%, 0 100%);
+    display: flex;
+    box-sizing: border-box;
+    border-end-end-radius: .5rem;
+    border-inline-start: .25rem solid #ba1120;
+}
