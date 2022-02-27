@@ -1,11 +1,11 @@
-import { getPokemon, getSpecies } from "./api.js";
+import { setPokemon } from "./pokedex.js";
 
 const $form = document.querySelector('#form');
-$form.addEventListener('submit', (e) =>{
+$form.addEventListener('submit', handleSubmit)
+
+async function handleSubmit(e) {
     e.preventDefault()
     const form = new FormData($form);
     const id = form.get('id');
-    const pokemon = await getPokemon(id);
-    const species = await getSpecies(id);
-    console.log(pokemon, species);
-})
+    setPokemon(id);
+} 
