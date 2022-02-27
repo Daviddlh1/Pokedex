@@ -3,7 +3,12 @@
 @import "./header.css";
 @import "./lights.css";
 @import "./stats.css";
-
+@import "./screen.css";
+@import "./actions.css";
+@import "./variants.css";
+@import "./search.css";
+@import "./description.css";
+@import "./navigation.css";
 
 :root { 
   --white: #fffffe; 
