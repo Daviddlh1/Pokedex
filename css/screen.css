@@ -1,13 +1,52 @@
-.screen {}
-
 .screen-border {
     padding: 1.5rem;
     padding-block-end: 2.75rem;
     border-radius: .5rem;
     background-color: var(--white);
     clip-path:polygon(0 0, 100% 0, 100% 100%, 2rem 100%, 0 calc(100% - 2.75rem)) ;
+    box-sizing: border-box;
+    position: relative;
 }
 
+.screen-border-buttons-big-container {
+    block-size: 1.375rem;
+    display: flex;
+    justify-content: flex-end;
+    inline-size: 100%;
+    align-items: center;
+    position: absolute;
+    inset-inline-start: -2rem;
+    inset-block-end: 0.6rem;
+}
+
+.screen-border-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.screen-border-button{
+    background-color: var(--primary);
+    block-size: 1rem;
+    inline-size: 1rem;
+    border-radius: 50%;
+}
+
+.screen-border-menu {
+    block-size: 1rem;
+    inline-size: 1rem;
+    margin-inline-start: 6.5rem;
+}
+.menu-lines{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    block-size: 2px;
+    inline-size: 100%;
+    background-color:  var(--secondary);
+    margin: 0;
+    margin-block-end: 2px;
+}
 .screen-safe-area {
     padding: 1rem;
     background-color: #8db9dc;

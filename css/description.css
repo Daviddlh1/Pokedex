@@ -8,6 +8,11 @@
     overflow: auto;
     border-radius: .5rem;
     border: 2px solid var(--black);
+    box-sizing: border-box;
+}
+
+.description::-webkit-scrollbar{
+    display: none;
 }
 
 .description p {

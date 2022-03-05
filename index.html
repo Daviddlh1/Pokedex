@@ -11,11 +11,11 @@
   <title>Pokedex</title>
 </head>
 <body>
-  <main class="pokedex" id="pokedex" tabindex="0">
+  <main class="pokedex is-open" id="pokedex" tabindex="0">
     <section class="pokedex-main is-open" aria-label="Pokemon's general info">
       <div class="header-shadow">
         <div class="header">
-          <span class="light is-big is-sky"></span>
+          <span class="light is-big is-sky" id="light"></span>
           <span class="light is-red"></span>
           <span class="light is-yellow"></span>
           <span class="light is-green"></span>
@@ -26,10 +26,28 @@
             <div class="screen-safe-area" id="screen">
               <img src="" alt="" id="image">
             </div>
+            <div class="screen-border-buttons-big-container">
+              <div class="screen-border-buttons-container">
+                <p class="screen-border-button"></p>
+                <p class="screen-border-button"></p>
+              </div>
+              <div class="screen-border-menu">
+                <p class="menu-lines"></p>
+                <p class="menu-lines"></p>
+                <p class="menu-lines"></p>
+                <p class="menu-lines"></p>              
+              </div>
+            </div>
         </div>        
       </div>
       <div class="actions">
-        <div class="variants">variants</div>
+        <div class="variants">
+          <p class="variant-button bigger"></p>
+          <div class="sub-buttons-container">
+            <p class="variant-button"></p>
+            <p class="variant-button is-blue"></p>
+          </div>
+        </div>
         <form role="search" class="search" id="form">
           <input type="text" name="id" placeholder="Who is that Pokemon?" autocomplete="off">
         </form>
@@ -45,17 +63,16 @@
 
       </div>
     </section>
-    <div class="cover-front"> type="module"
+    <div class="cover-front">
       cover-front
     </div>
     <section class="cover-back  " aria-label="Pokemon's stats">
       <div class="stats">
-        stats
+        <canvas id="stats" width="200" height="400"></canvas>
       </div>
     </section>
   </main>
-  <script src="./js/pokedex.js" type="module"></script>
-  <script src="./js/api.js" type="module" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
   <script src="./js/index.js" type="module"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+import './charts.js';
 import { setPokemon, setImage } from "./pokedex.js";
 
 const $pokedex = document.querySelector('#pokedex');
@@ -43,13 +44,20 @@ async function handleNextImage(e){
     if(!activePokemon) return false;
     if(activeSprite === activePokemon.sprites.length-1){
         activeSprite = 0
-        console.log('entré', activeSprite)
-        setImage(activePokemon.sprites[activeSprite]);
+        return setImage(activePokemon.sprites[activeSprite]);
     }
     activeSprite = activeSprite + 1;
     setImage(activePokemon.sprites[activeSprite]);
 }
 
 async function handlePrevImage(){
+    console.log(activeSprite)
     if(!activePokemon) return false;
+    if(activeSprite === 0){
+        activeSprite = activePokemon.sprites.length -1;
+        console.log(activeSprite)
+        return setImage(activePokemon.sprites[activeSprite]);
+    }
+    activeSprite = activeSprite -1;
+    setImage(activePokemon.sprites[activeSprite])
 }
