@@ -1,5 +1,4 @@
 # Pokedex
-Pokedex
 ---
 
 <img src="./design/Pokedex.gif"/>
