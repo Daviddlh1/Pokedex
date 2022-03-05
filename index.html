@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/index.css">
-  <title>Pokedex</title>
-</head>
-<body>
-  <main class="pokedex is-open" id="pokedex" tabindex="0">
-    <section class="pokedex-main is-open" aria-label="Pokemon's general info">
-      <div class="header-shadow">
-        <div class="header">
-          <span class="light is-big is-sky" id="light"></span>
-          <span class="light is-red"></span>
-          <span class="light is-yellow"></span>
-          <span class="light is-green"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <main class="pokedex" id="pokedex" tabindex="0">
+      <section class="pokedex-main is-open" aria-label="Pokemon's general info">
+        <div class="header-shadow">
+          <div class="header">
+            <span class="light is-big is-sky" id="light"></span>
+            <span class="light is-red"></span>
+            <span class="light is-yellow"></span>
+            <span class="light is-green"></span>
+          </div>
         </div>
-      </div>
-      <div class="screen">
-        <div class="screen-border">
+        <div class="screen">
+          <div class="screen-border">
             <div class="screen-safe-area" id="screen">
-              <img src="" alt="" id="image">
+              <img src="" alt="" id="image" />
             </div>
             <div class="screen-border-buttons-big-container">
               <div class="screen-border-buttons-container">
@@ -35,47 +38,62 @@
                 <p class="menu-lines"></p>
                 <p class="menu-lines"></p>
                 <p class="menu-lines"></p>
-                <p class="menu-lines"></p>              
+                <p class="menu-lines"></p>
               </div>
             </div>
-        </div>        
-      </div>
-      <div class="actions">
-        <div class="variants">
-          <p class="variant-button bigger" id="random-pokemon"></p>
-          <div class="sub-buttons-container">
-            <p class="variant-button"></p>
-            <p class="variant-button is-blue"></p>
           </div>
         </div>
-        <form role="search" class="search" id="form">
-          <input type="text" name="id" placeholder="Who is that Pokemon?" autocomplete="off">
-        </form>
-        <div class="description">
-          <p id="description">Search a Pokemon to get all his stats</p>
+        <div class="actions">
+          <div class="variants">
+            <p class="variant-button bigger" id="random-pokemon"></p>
+            <div class="sub-buttons-container">
+              <p class="variant-button"></p>
+              <p class="variant-button is-blue"></p>
+            </div>
+          </div>
+          <form role="search" class="search" id="form">
+            <input
+              type="text"
+              name="id"
+              placeholder="Who is that Pokemon?"
+              autocomplete="off"
+            />
+          </form>
+          <div class="description">
+            <p id="description">Search a Pokemon to get all his stats</p>
+          </div>
+          <div class="navigation">
+            <button
+              class="navigation-right"
+              id="next-pokemon"
+              aria-label="next pokemon"
+            ></button>
+            <button
+              class="navigation-left"
+              id="prev-pokemon"
+              aria-label="previous pokemon"
+            ></button>
+            <button
+              class="navigation-up"
+              id="next-image"
+              aria-label="next image of the pokemon"
+            ></button>
+            <button
+              class="navigation-down"
+              id="prev-image"
+              aria-label="previous image of the pokemon"
+            ></button>
+          </div>
         </div>
-        <div class="navigation">
-          <button class="navigation-right" id="next-pokemon" aria-label="next pokemon"></button>
-          <button class="navigation-left" id="prev-pokemon" aria-label="previous pokemon"></button>
-          <button class="navigation-up" id="next-image" aria-label="next image of the pokemon" ></button>
-          <button class="navigation-down" id="prev-image" aria-label="previous image of the pokemon"></button>
+      </section>
+      <div class="cover-front">cover-front</div>
+      <section class="cover-back" aria-label="Pokemon's stats">
+        <div class="stats">
+          <canvas id="stats" width="200" height="400"></canvas>
         </div>
-
-      </div>
-    </section>
-    <div class="cover-front">
-      cover-front
-    </div>
-    <section class="cover-back  " aria-label="Pokemon's stats">
-      <div class="stats">
-        <canvas id="stats" width="200" height="400"></canvas>
-      </div>
-    </section>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-  <script src="./js/index.js" type="module"></script>
-</body>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
 </html>
-
-
-

@@ -19,6 +19,7 @@
     inline-size: 1.87rem;
     block-size: 0.5rem;
     border-radius: 0.5rem;
+    box-shadow: 2px 0px 6px 1px black;
 }
 
 .variant-button.is-blue {
