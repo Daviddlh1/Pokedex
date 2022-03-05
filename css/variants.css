@@ -30,5 +30,10 @@
     inline-size: 3.25rem;
     border-radius: 50%;
     background-color: var(--secondary);
+    cursor: pointer;
+    box-shadow: 2px 0px 6px 1px black;
+}
 
+.bigger:active {
+    transform: scale(0.9);
 }

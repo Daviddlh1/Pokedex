@@ -17,9 +17,11 @@ function Loader(isLoading = false) {
     $screen.style.backgroundImage = img;
 }
 
+const synth = window.speechSynthesis
 const $light = document.querySelector('#light');
 function speech(text){
     const utterance = new SpeechSynthesisUtterance(text);
+    synth.cancel();
     utterance.lang= 'en';
     speechSynthesis.speak(utterance);
     $light.classList.add("is-animated");
